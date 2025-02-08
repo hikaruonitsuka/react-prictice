@@ -16,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <div className="grid grid-rows-[auto_1fr_auto] grid-cols-[100%] min-h-screen max-w-5xl mx-auto">
+        <div className="mx-auto grid min-h-screen max-w-5xl grid-cols-[100%] grid-rows-[auto_1fr_auto]">
           <Header />
-          <main className="sm:px-8 px-4 my-8">{children}</main>
+          <main className="my-8 px-4 sm:px-8">{children}</main>
           <Footer />
         </div>
       </body>

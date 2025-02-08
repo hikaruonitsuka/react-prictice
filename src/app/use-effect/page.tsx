@@ -1,14 +1,15 @@
+import Typography from "@/components/common/Typography";
 import Link from "next/link";
 
 export default function UseEffect() {
   return (
     <div>
-      <h1 className="font-bold text-3xl">useEffect</h1>
-      <p className="mt-4">
+      <Typography component="h1" variant="h1">useEffect</Typography>
+      <Typography className="mt-4">
         useEffectは、<strong>コンポーネントを外部システムと同期させる</strong>
         ためのReact組み込みのフックのこと
-      </p>
-      <h2 className="mt-8 font-bold text-xl">ユースケース</h2>
+      </Typography>
+      <Typography component="h2" variant="h2" className="mt-8">ユースケース</Typography>
       <ul className="mt-2">
         <li>
           レンダリング後に何かしらの外部システムなどと連携を取りたい場合に利用

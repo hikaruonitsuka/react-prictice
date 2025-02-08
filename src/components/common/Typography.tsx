@@ -3,8 +3,8 @@ import { twMerge } from "tailwind-merge";
 import { match } from "ts-pattern";
 
 type TypographyProps = {
-  component: React.ElementType;
-  variant?: "h1" | "h2" | "h3" | "h4" | "p";
+  component?: React.ElementType;
+  variant?: "h1" | "h2" | "p";
   children: React.ReactNode;
   className?: string;
 };
@@ -21,10 +21,8 @@ const Typography = ({
   // variant未指定だとstyleを適用しない
   const fontStyle = variant
     ? match(variant)
-        .with("h1", () => clsx("text-3xl"))
-        .with("h2", () => clsx("text-2xl", "font-bold"))
-        .with("h3", () => clsx("text-xl"))
-        .with("h4", () => clsx("text-lg"))
+        .with("h1", () => clsx("text-3xl", "font-bold"))
+        .with("h2", () => clsx("text-xl", "font-bold"))
         .with("p", () => clsx("text-sm"))
         .exhaustive()
     : "";
